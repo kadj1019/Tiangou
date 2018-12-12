@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'base/css/public.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/homepage.css' %}">
+    {% block extbasecss %}
+    {% endblock %}
+</head>
+<body>
+<div class="top-header">
+    <div class="t-menu">
+        <div class="hello">
+            你好：欢迎光临天狗商城！[<a href="{% url 'tiangou:login' %}">{{ name | default:'请登录' }}</a>][<a href="{% url 'tiangou:register' %}">{{ email | default:'免费注册' }}</a>]
+        </div>
+        <div class="shop">
+            <span class="shoppingCar">
+                <div style="background: url({% static 'base/img/shoppingcar.jpg' %});width: 77px;
+                        margin: 4px 8px 0 0;
+                        float: left;
+                        line-height: 21px;
+                        padding-left: 27px
+                        ">
+                    <a href="#">购物车<span class="red1 b">0</span>件</a>
+                </div>
+            </span>
+            <a class="sub" href="">我的订单</a>|
+            <a class="sub" href="">网站地图</a>|
+            <a class="sub" href="">帮助中心</a>|
+            <a class="sub" href="">加入收藏</a>|
+            <a class="sub" href="">设为首页</a>
+        </div>
+    </div>
+</div>
+<!--    =============top=============    -->
+<div class="top">
+    <div class="header">
+        <div class="logo">
+            <a href="{% url 'tiangou:homepage' %}">
+                <img src="{% static 'base/img/logo.jpg' %}" alt="天狗商城">
+            </a>
+        </div>
+        <div class="search">
+            <dl>
+                <dd>
+                    <span class="tag">商品</span>
+                </dd>
+                <dd>
+                        <span class="r">
+                            <input style="border: none; background: url({% static 'base/img/search.png' %})  left top; height: 30px;
+                                    width: 148px;" onclick="search()" type="button">
+                        </span>
+                    <input class="input-n" id="searchWord" style="background: url({% static 'img/bg_bg.gif' %}) no-repeat;" placeholder="多搜搜，意外惊喜等你拿">
+                </dd>
+                <dt class="suol">
+                    <a href="#" target="_blank">手机/钟表/家电/电脑/男装/女装/灯具/童装/儿童玩具/笔记本/平板/相机/鞋</a></dt>
+            </dl>
+        </div>
+    </div>
+</div>
+<!--   ================ menu =================  -->
+<div class="menu-neuy" style="background: url({% static 'base/img/menubg.jpg' %})">
+    <div class="menu">
+        <div class="leftmenu">所有商品分类</div>
+        <ul class="nav">
+            <li>
+                <a href="{% url 'tiangou:index' %}">首页</a>
+            </li>
+            <li>
+                <a href="#">手机数码</a>
+            </li>
+            <li>
+                <a href="#">礼品箱包</a>
+            </li>
+            <li>
+                <a href="#">厨具用品</a>
+            </li>
+            <li>
+                <a href="#">电脑办公</a>
+            </li>
+            <li>
+                <a href="#">服饰鞋帽</a>
+            </li>
+            <li>
+                <a href="#">个护化妆</a>
+            </li>
+            <li>
+                <a href="#">母婴用品</a>
+            </li>
+        </ul>
+        <div class="hot_right">
+            <dl>
+                <dd>
+                    <a href="#" target="_blank">
+                        <div class="hot"></div>
+                    </a>
+                    <a href="#" target="_blank">分销</a>
+                </dd>
+                <dd>
+                    <a href="#" target="_blank">
+                        <div class="new"></div>
+                    </a>
+                    <a href="#" target="_blank">导航</a>
+                </dd>
+                <dd>
+                    <a href="#" target="_blank">
+                        <div class="diy"></div>
+                    </a>
+                    <a href="#" target="_blank">团购</a>
+                </dd>
+                <dd>
+                    <a href="#">
+                        <div class="go"></div>
+                    </a>
+                    <a href="#" target="_blank">充值</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="menu_1">
+    <div class="pf"></div>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<!--   ================     footer    ==============  -->
+<div class="footerbg">
+    <div id="bottom1_linkUrl" class="friendlink"><strong>友情链接：</strong><a target="_blank"
+                                                                          href="http://www.jiancai0591.com">天狗网商城</a><a
+            target="_blank" href="http://www.jxhscjc.com/">介休市弘盛昌家具建材装饰城</a><a target="_blank"
+                                                                               href="http://www.jxbzmm.com">介休鸿宪居装饰公司</a><a
+            target="_blank" href="http://www.jxjjjcw.com">介休家具建材网</a><a target="_blank" href="http://www.tgwlkj.com">天狗网络科技有限公司</a><a
+            target="_blank" href="http://jxtgwl.sitekc.com/">天狗网络科技自助建站系统</a><a target="_blank"
+                                                                                href="http://www.jxbgfd0591.com">天狗网上商城</a><a
+            target="_blank" href="http://www.jxtthg.com">涛涛三味火锅餐饮有限公司</a></div>
+    <!--友情连接 end-->
+    <div class="help_cent">
+        <div class="help_cent_l">
+            <ul>
+                <li><img src={% static 'base/img/tel.jpg' %}>客服服务热线
+                    <div class="tel">03547357121 13383445351
+                        <a target="_blank" href="#"><img border="0" src={% static 'base/img/liuyan.gif' %} alt="有事点这里"></a>
+                    </div>
+                    <span>(7*24小时服务)</span></li>
+                <li id="bottom1_kfdm"><a target="_blank"
+                                         href="http://wpa.qq.com/msgrd?v=3&amp;uin=1253048126&amp;site=qq&amp;menu=yes"><img
+                        border="0" src={% static 'base/img/jiaotan.gif' %} alt="点这里联系我" title="点这里联系我"></a></li>
+            </ul>
+        </div>
+        <div class="help_cent_r">
+
+            <span id="bottom1_help"><ul><li style="list-style-image: none"><img
+                    src={% static 'base/img/gu0.jpg' %} alt=""><h3>关于我们</h3></li><li
+                    class="mar"><a href="#" target="_blank">货源提供</a></li><li class="mar"><a href="#" target="_blank">联系客服</a></li><li
+                    class="mar"><a href="#" target="_blank">商城简介</a></li></ul><ul><li
+                    style="list-style-image: none"><img src={% static 'base/img/gu1.jpg' %} alt=""><h3>售后服务</h3></li><li
+                    class="mar"><a
+                    href="#" target="_blank">产品退换</a></li><li class="mar"><a href="#" target="_blank">订单查询</a></li><li
+                    class="mar"><a href="#" target="_blank">收货说明</a></li><li class="mar"><a href="#" target="_blank">在线旺旺客服</a></li></ul><ul><li
+                    style="list-style-image: none"><img src={% static 'base/img/gu2.jpg' %} alt=""><h3>支付宝</h3></li><li
+                    class="mar"><a
+                    href="#" target="_blank">支付宝</a></li><li class="mar"><a href="#" target="_blank">货到付款</a></li><li
+                    class="mar"><a href="#" target="_blank">银行付款</a></li></ul><ul><li
+                    style="list-style-image: none"><img src={% static 'base/img/gu3.jpg' %} alt=""><h3>购物指南</h3></li><li
+                    class="mar"><a
+                    href="#" target="_blank">购物流程</a></li><li class="mar"><a href="#" target="_blank">常见问题</a></li><li
+                    class="mar"><a href="#" target="_blank">会员注册</a></li></ul><ul><li
+                    style="list-style-image: none"><img src={% static 'base/img/gu4.jpg' %} alt=""><h3>配送方式</h3></li><li
+                    class="mar"><a
+                    href="#" target="_blank">运费标准</a></li><li class="mar"><a href="#" target="_blank">配送政策</a></li><li
+                    class="mar"><a href="#" target="_blank">订单说明</a></li></ul></span>
+            <ul>
+                <li style="width: 140px; float: left; list-style-image: none">
+                    <img src={% static 'base/img/gu4.jpg' %}>
+                    <h3>
+                        <a href="#" target="_blank">手机扫二维码登陆</a></h3>
+                </li>
+                <li style="float: right; list-style-image: none;"><a href="#" target="_blank">
+                    <img id="bottom1_ewmimg" width="120px" height="120px"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="footer">
+        天狗网络科技有限公司版权所有
+        <div id="bottom1_tongji"><span><a href="#" title="站长统计">站长统计</a></span></div>
+    </div>
+    <p id="bottom1_bootonContent"></p>
+</div>
+
+
+<script src="{% static 'base/js/jquery-1.12.0.js' %}"></script>
+<script src="{% static 'base/js/jquery.cookie.js' %}"></script>
+<script src="{% static 'base/js/lunBo.js' %}"></script>
+<script src="{% static 'base/js/brand.js' %}"></script>
+<script src="{% static 'base/js/miaoSha.js' %}"></script>
+<script src="{% static 'base/js/vip.js' %}"></script>
+<script src="{% static 'base/js/phone_lun.js' %}"></script>
+<script src="{% static 'base/js/phone_list.js' %}"></script>
+<script src="{% static 'base/js/gift_lun.js' %}"></script>
+<script src="{% static 'base/js/comLeft.js' %}"></script>
+<script src="{% static 'base/js/comRight.js' %}"></script>
+<script src="{% static 'base/js/computerList.js' %}"></script>
+<script src="{% static 'base/js/dress_lun.js' %}"></script>
+<script src="{% static 'base/js/dress_list.js' %}"></script>
+<script src="{% static 'base/js/makeup_lun.js' %}"></script>
+<script src="{% static 'base/js/makeup_list.js' %}"></script>
+<script src="{% static 'base/js/producuts.js' %}"></script>
+<script src="{% static 'base/js/gwc_num.js' %}"></script>
+{% block extbasejs %}
+{% endblock %}
+
+</body>
+</html>

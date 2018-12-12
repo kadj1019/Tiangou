@@ -1,0 +1,52 @@
+[
+  {
+    "msg":"魅族 MX4 16GB 灰色 移动4G手机",
+    "price":"￥999元",
+    "img":"static/img/ph1.jpg"
+  },
+  {
+    "msg":"魅族 PRO5 64GB 银白色 移动联通双4G手机 双卡双待",
+    "price":"￥3099元",
+    "img":"static/img/ph2.jpg"
+  },
+  {
+    "msg":"Huawei/华为 Mate8全网通",
+    "price":"￥3699元",
+    "img":"static/img/ph3.jpg"
+  },
+  {
+    "msg":"Huawei/华为 荣耀畅玩5X",
+    "price":"￥1599元",
+    "img":"static/img/ph4.jpg"
+  },
+  {
+    "msg":"分期免息送16G卡皮套钢化膜 Huawei/华为 荣耀7全网通4G",
+    "price":"￥2469元",
+    "img":"static/img/ph5.jpg"
+  },
+  {
+    "msg":"Huawei/华为 P8青春版 电信移动 联通 双4G智能手机双",
+    "price":"￥1388元",
+    "img":"static/img/ph6.jpg"
+  },
+  {
+    "msg":"Huawei/华为 P8标准版双4G手机",
+    "price":"￥2288元",
+    "img":"static/img/ph7.jpg"
+  },
+  {
+    "msg":"送32G卡/电源耳机皮套 Huawei/华为 荣耀畅玩4C手机",
+    "price":"￥799元",
+    "img":"static/img/ph8.jpg"
+  },
+  {
+    "msg":"Huawei/华为 荣耀6 移动联通 4G智能手机",
+    "price":"￥1599元",
+    "img":"static/img/ph9.jpg"
+  },
+  {
+    "msg":"索尼（SONY） NEX-F3K 微单单镜套机 粉色（E18-55mm F",
+    "price":"￥3370元",
+    "img":"static/img/ph10.jpg"
+  }
+]

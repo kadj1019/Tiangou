@@ -1,0 +1,87 @@
+[
+	{
+			"msg":"三星S6 9208 金，金属边框&玻璃机身，0.7秒快速启动...",
+			"price":"抢购价格：￥3735元",
+			"img":"static/img/pro1.jpg",
+	},
+	{
+			"msg":"【联通4G】魅蓝 metal 16G灰色 超值套装，5.5英寸 送...",
+			"price":"抢购价格：￥1099元",
+			"img":"static/img/pro2.jpg",
+	},
+	{
+			"msg":"Apple iPhone 6 Plus (A1524) 16GB 金色 移动联通电...",
+			"price":"抢购价格：￥4888元",
+
+			"img":"static/img/pro3.jpg",
+
+	},
+	{
+			"msg":"Apple iPhone 6s Plus (A1699) 64G 银色 移动联通电..",
+			"price":"抢购价格：￥6288元",
+
+			"img":"static/img/pro4.jpg",
+
+	},
+	{
+			"msg":"三星A7009 白，屏幕尺寸 5.5英寸，电池容量（mAh）",
+			"price":"抢购价格：￥1335元",
+			"img":"static/img/pro5.jpg"
+	},
+	{
+			"msg":"【电信4G】魅蓝 NOTE2 16G白色 超值套装，5.5英",
+			"price":"抢购价格：￥1099元",
+			"img":"static/img/pro6.jpg"
+	},
+	{
+			"msg":"【联通4G】魅蓝 metal 16G灰色 超值套装，5.5英",
+			"price":"抢购价格：￥1099元",
+			"img":"static/img/pro2.jpg"
+	},
+	{
+			"msg":"Apple iPhone 5s (A1530) 16GB 金",
+			"price":"抢购价格：￥2670元",
+			"img":"static/img/pro7.jpg"
+	},
+	{
+			"msg":"三星NOTE5 N9200 白，屏幕尺寸 5.7英寸，双卡机",
+			"price":"抢购价格：￥4270元",
+			"img":"static/img/pro8.jpg"
+	},
+	{
+			"msg":"三星S6 9208 金，金属边框&玻璃机身，0.7秒快速启动",
+			"price":"抢购价格：￥3735元",
+			"img":"static/img/pro1.jpg"
+	},
+	{
+			"msg":"三星A7100 女王粉，屏幕尺寸 5.5英寸,电池容量（mA",
+			"price":"抢购价格：￥2667元",
+			"img":"static/img/pro9.jpg"
+	},
+	{
+			"msg":"Apple iPhone 6s Plus (A1699) 6",
+			"price":"抢购价格：￥6288元",
+			"img":"static/img/pro4.jpg"
+	},
+
+	{
+			"msg":"三星S6 9208 金，金属边框&玻璃机身，0.7秒快速启动...",
+			"price":"抢购价格：￥3735元",
+			"img":"static/img/pro1.jpg"
+	},
+	{
+			"msg":"【联通4G】魅蓝 metal 16G灰色 超值套装，5.5英寸 送...",
+			"price":"抢购价格：￥1099元",
+			"img":"static/img/pro2.jpg"
+	},
+	{
+			"msg":"Apple iPhone 6 Plus (A1524) 16GB 金色 移动联通电...",
+			"price":"抢购价格：￥4888元",
+			"img":"static/img/pro3.jpg"
+	},
+	{
+			"msg":"Apple iPhone 6s Plus (A1699) 64G 银色 移动联通电..",
+			"price":"抢购价格：￥6288元",
+			"img":"static/img/pro4.jpg"
+	}
+]

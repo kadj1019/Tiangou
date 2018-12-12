@@ -1,0 +1,357 @@
+{% extends 'base/base_template.html' %}
+{% load static %}
+
+{% block extbasecss %}
+    <link rel="stylesheet" href="{% static 'goods/css/goods.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- ========================  商品详情  ====================== -->
+<div class="main">
+    <div class="leftBox">
+        <div>
+            <img src="{% static 'img/xq1.jpg' %}" alt="">
+        </div>
+        <div class="paiHang">
+            <h4>畅销排行榜</h4>
+            <ul>
+                <li class="dimension">
+                    <span class="red">1</span>
+                    <div class="pic"><a  href="#"><img alt="" src="{% static 'img/xq2.jpg' %}"></a></div>
+                    <div class="text"><a href="#">三星NOTE5 N9200 白，屏幕尺...</a><br>
+                        <span class="price">￥5336</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="red">2</span>
+                    <a href="#">三星S6 9208 金，金属边框&玻璃</a>
+                </li>
+                <li>
+                    <span class="red">3</span>
+                    <a href="#">三星A7100 女王粉，屏幕尺寸 5.</a>
+                </li>
+                <li>
+                    <span class="red">4</span>
+                    <a href="#">Apple iPhone 6s Plu...</a>
+                </li>
+                <li>
+                    <span class="red">5</span>
+                    <a href="#">Meitu/美图 v4 美图手机V4秀...</a>
+                </li>
+                <li>
+                    <span class="red">6</span>
+                    <a href="#">Meitu/美图 v4 美图手机V4秀...</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tuiJian">
+            <h4>推荐品牌</h4>
+            <div class="sd">
+                <ul>
+                    <li><a href="#"><img alt="苹果apple" src="{% static 'img/pinpai1.jpg' %}"></a></li>
+                    <li><a href="#"><img alt="华为" src="{% static 'img/pinpai2.jpg' %}"></a></li>
+                    <li><a href="#"><img alt="索尼" src="{% static 'img/pinpai3.jpg' %}"></a></li>
+                    <li><a href="#"><img alt="魅族" src="{% static 'img/pinpai4.jpg' %}"></a></li>
+                    <li><a href="#"><img alt="OPPO" src="{% static 'img/pinpai5.jpg' %}"></a></li>
+                    <li><a href="#"><img alt="小米" src="{% static 'img/pinpai6.jpg'%}"></a></li>
+                    <li><a href="#"><img alt="美图" src="{% static 'img/pinpai7.jpg' %}"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="pb_detailt">
+        <div class="pb_detailposi gray">
+            <b>当前位置: </b>
+            <a href="{% url 'tiangou:homepage' %}">首页</a> &gt;
+            <a target="_blank" href="/p/aspx/list.aspx?typeId=F_12"> 手机数码</a> &gt;
+            <a target="_blank" href="/p/aspx/list.aspx?typeId=S_17"> 手机通讯</a> &gt;
+            <a target="_blank" href="/p/aspx/list.aspx?typeId=T_1203"> 手机</a> &gt; {{ goods.jieShao }}
+        </div>
+        <div class="pb_imdetail clear">
+            <div class="largeimgs">
+                <div class="jqzoom" id="BigImage">
+                    <img src="{{ goods.img }}" alt="">
+                    <div class="jqZoomPup" style=" visibility: visible; top: 62.5px; left: 0px;">&nbsp;</div>
+                </div>
+                <div class="zoomdiv">
+                    <img class="bigimg" src="{{ goods.img }}">
+                </div>
+                <img src="{% static 'img/fx_frend.gif' %}" alt="" style="cursor: pointer">
+                <img src="{% static 'img/sc_cp.gif' %}" alt="收藏" id="addFav" style="cursor: pointer">
+                <!--<b>评分： <img src="images/fivestar.gif" alt=""/> 已有3人评论</b>-->
+            </div>
+            <ul class="xuanxiang">
+                <li>
+                    <h1>
+                        【联通4G】魅蓝 metal 16G灰色 超值套装，5.5英寸 送耳机+保护套+贴膜</h1>
+                </li>
+                <li>商品编号：{{ goods.bianHao }}
+                </li>
+                <li>商品简介：{{ goods.jieShao }}
+                </li>
+                <li>价 格：<span>{{ goods.price }}</span> </li>
+                <li>商城价格：<strong>{{ goods.shopPrice }}</strong> </li>
+                <li class="borli">
+                    <span>颜色：<em id="颜色_白色" |="">白色</em><em id="颜色_蓝" |="">蓝</em><em id="颜色_灰" |="">灰</em><em id="颜色_银色" |="">银色</em></span>
+                            <span>我 要 买：
+                                <input name="txtNum" id="txtNum" type="text" value="1" style="width: 80px;">
+                                个 <b>(下订单后立即发货)</b> </span>
+                    <img src="{% static 'img/dg.gif' %}" id="rightBuy" style="cursor: pointer;">
+                    <img src="{% static 'img/gwc.gif' %}" alt="" id="addShopCart" style="cursor: pointer">
+                </li>
+                <li class="special">累计出售：<strong>325</strong>件
+                    收藏：<strong id="ShouC">273</strong>次
+                    浏览：<strong>349</strong>次
+                </li>
+                <li>
+                    <div class="fx_v hsz_14">
+                        <!-- JiaThis Button BEGIN -->
+                        <div id="ckepop">
+                            <a href="http://www.jiathis.com/share/" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank">分享到：</a> <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span></a> <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span></a> <a class="jiathis_button_kaixin001" title="分享到开心网"><span class="jiathis_txt jiathis_separator jtico jtico_kaixin001">开心网</span></a> <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span></a>
+                        </div>
+                        <!-- JiaThis Button END -->
+                    </div>
+                </li>
+            </ul>
+            <input type="hidden" value="P20160313153110796" id="goodsNo">
+            <div class="clearf">
+            </div>
+        </div>
+        <!--课程重要信息=end-->
+        <div class="pb_dzuhe">
+            <ul id="tab2" class="clear">
+                <li class="hover" id="two1">人气组合</li>
+                <li id="two2">推荐搭配</li>
+            </ul>
+            <div class="pb_zuhecon hover" id="con_two_1">
+                <ol class="clear">
+                    <li><a href="#" target="_blank"><img src="{% static 'img/rq1.jpg' %}" alt="HTC X920e 3G手机（优雅白）WCDMA/GSM" width="110"></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">HTC X920e 3G手机（...</a></p>
+                        商城价：<b>￥3189</b><br>
+                    </li>
+                    <li><a href="#" target="_blank"><img src="{% static 'img/rq2.jpg' %}" alt="V.LAND 葳朗 VE65 电信3G手机 双模双待 CDMA2000/GSM 杏色" width="110"></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">V.LAND 葳朗 VE65 电...</a></p>
+                        商城价：<b>￥899</b><br>
+                    </li>
+                    <li><a href="#" target="_blank"><img src="{% static 'img/rq3.jpg' %}" alt="嘉源4.7寸双核1G双卡双待安卓智能手机G8850 GSM 白" width="110"></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">嘉源4.7寸双核1G双卡...</a></p>
+                        商城价：<b>￥601</b><br>
+                    </li>
+                    <li><a href="#" target="_blank"><img src="{% static 'img/rq4.jpg' %}" alt="苹果（APPLE）iPhone 5 16G版 3G手机（白色）WCDMA/GSM全新设计，更薄、更轻、更快、更好" width="110"></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">苹果（APPLE）iPhone ...</a></p>
+                        商城价：<b>￥4741</b><br>
+                    </li>
+                </ol>
+            </div>
+            <div class="pb_zuhecon hover" id="con_two_2" style="display: none">
+                <ol class="clear">
+                    <li><a href="#" target="_blank"><img src="{% static 'img/tj1.jpg' %}" ></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">大显（Daxian）TC258 ...</a></p>
+                        商城价：<b>￥302</b><br>
+                    </li>
+                    <li><a href="#" target="_blank"><img src="{% static 'img/tj2.jpg' %}" ></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">E派（EBEST）S7 四核...</a></p>
+                        商城价：<b>￥699</b><br>
+                    </li>
+                    <li><a href="#" target="_blank"><img src="{% static 'img/tj3.jpg' %}" ></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">嘉源4寸双核1G双卡双...</a></p>
+                        商城价：<b>￥390</b><br>
+                    </li>
+                    <li><a href="#" target="_blank"><img src="{% static 'img/tj4.jpg' %}" ></a>
+                        <p><a href="#" target="_blank"></a></p>
+                        <p><a target="_blank" href="#">苹果（APPLE）iPhone ...</a></p>
+                        商城价：<b>￥4581</b><br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!--人气组合推荐搭配end-->
+        <div class="pb_changetable">
+            <ul id="tab1" class="clear">
+                <li class="hover" id="one1">详细说明</li>
+                <li id="one2">商品评价</li>
+                <li id="one3">支付帮助</li>
+                <li id="one4">配送帮助</li>
+                <li id="one5">常见问题</li>
+            </ul>
+            <div class="clearf">
+            </div>
+            <div class="pb_coursedetail hover" id="con_one_1"><p>
+            </p><table class="dc-table fst">
+                <tbody>
+                <tr>
+                    <td class="dc-table-tit">品牌名称：</td>
+                    <td>魅族</td>
+                    <td class="dc-table-tit">商品名称：</td>
+                    <td>【联通4G】魅蓝 metal 16G灰色 超值套装</td>
+                </tr>
+                <tr>
+                    <td class="dc-table-tit">商品分类：</td>
+                    <td>手机</td>
+                    <td class="dc-table-tit">产地：</td>
+                    <td>中国</td>
+                </tr>
+                <tr>
+                    <td class="dc-table-tit">材质：</td>
+                    <td>工程塑料</td>
+                    <td class="dc-table-tit">配件/备注：</td>
+                    <td>手机主机x1,连接线x1,说明书x1,充电器x1,耳机x1,贴膜x1,保护壳x1</td>
+                </tr>
+                <tr>
+                    <td class="dc-table-tit">商品编号：</td>
+                    <td>联通魅蓝metal16灰套餐A</td>
+                    <td class="dc-table-tit">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+                <p></p></div>
+            <!--课程详情 end-->
+            <div id="con_one_2" class="pb_detailcomment pb_coursedetail" style="display: none">
+            </div>
+            <!--评论-->
+            <div class="pb_coursedetail" id="con_one_3" style="display: none"><p>本商城在线支付目前暂支持支付宝这一种最通用方式。支付宝、财付通、网银在线（支持29家银行）</p>
+                <table width="548" height="103" cellspacing="1" cellpadding="1" border="1">
+                    <tbody>
+                    <tr>
+                        <td>&nbsp;<img src="{% static 'img/zfb.png' %}" alt=""></td>
+                        <td>&nbsp;<img src="{% static 'img/cft.png' %}" alt=""></td>
+                        <td>&nbsp;<img src="{% static 'img/wy.png' %}" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>说明：<br>
+                    1、购物后选择支付宝付款，您将跳转至支付宝网站，即可付款，付款后订单将自动更新为已付款状态。<br>
+                    2、购物后选择财付通付款，您将跳转至财付通网站，即可付款，付款后订单将自动更新为已付款状态。<br>
+                    3、购物后选择网上银行付款，您将跳转至网上银行网站，付款后订单将自动更新为已付款状态。<br>
+                    4、如果您在操作的时候遇到网络中断或者或其他原因而导致支付流程未完成时，可以于48小时之内登录我的帐户重新进行支付。<br>
+                    5、如果经查询您的款项已经划拨，而查询订单却显示未付款，那是由于支付宝通讯延迟，未能更新订单状态，我们会及时更新订单支付情况，如您无法确定订单支付是否成功，请咨询在线客服。<br>
+                    6、未付款订单自下单之日起保留48小时，48小时之后仍未付款订单将自动关闭，无法恢复，若有特殊情况要保留订单者请联系客服，否则概不负责。</p></div>
+            <!--支付帮助-->
+            <div class="pb_coursedetail" id="con_one_4" style="display: none"><p>备货周期：您可以了解所购买商品的备货周期，同时根据商品的备货周期来了解商品的发货速度。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 配送时效：商品下单后会在两个工作日内发出，特殊情况除外。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 送货方式：送货上门，部分偏远地区需自行取件。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了确保您的商品顺利送达目的地，请准确填写收货人的姓名、地址、邮编、电话等并保证所填信息真实有效；订单发货过程中，请保持您所填联系电话畅通，以便送货人员随时联系您！<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有订单到货时间以各客商选择的快递公司实际货运时间为准，为了节省您的时间，您在下单时请选择熟悉的快递公司或根据平时网购经验选择快递公司，必要时请到各快递公司官网查询您的收货地点是否在已选快递公司服务范围内，谢谢合作。</p>
+                <p>特别说明：</p>
+                <p>&nbsp; 　　1、如遇五一、十一、春节假期、当地城市的大型庆祝活动、大雨雪、洪涝、冰灾、地震等自然灾害及交通管制等特殊情况，配送时间将会有适当顺延，请您给予谅解！</p>
+                <p>&nbsp; 　　2、本商城不受理用户到商城仓库、门店的自取业务，所有订单都需经过本商城的统一配送安排，敬请理解。</p>
+                <p>&nbsp; 　　3、发货时间本商城在核对用户所订购的商品、邮寄地址、款项支付等信息无误后确认订单，订单确认后通常在一个工作日内将包裹发出（不包括商品备货周期）；包裹发出后本商城将配送相关信息呈现在会员帐户信息当中，以方便用户直接通过物流公司平台查询包裹在途情况。</p>
+                <p>&nbsp; 　　4、收件人请填写中文名字，如使用非中文名字，请务必与身份证或护照保持完全一致，以保证您的包裹可以准确送达。如因此造成包裹无法送达或丢失，本商城不承担任何责任。</p>
+                <p>　5、当物流公司人员上门送货时，请注意检查商品外包装是否有破损，如出现以上情况，请及时与本商城客服中心联系。</p>
+                <p>　　&nbsp; 6、 订单物流查询：如需第一时间查询您的物流配送情况，请点击对应的物流承运商进行查询，快递单号可以登陆本商城会员中心的订单管理中获取，建议发货后24小时后进行查询。</p></div>
+            <!--配送帮助end-->
+            <div class="pb_coursedetail" id="con_one_5" style="display: none"><p>1、问：购买商城的商品必须要注册会员吗？<br>
+                &nbsp;&nbsp; 答：您必须注册为本商城会员才能购买商城产品，注册会员更方便您查看购物信息，并可以累计获取商城积分换购礼品。</p>
+                <p>2、问：为什么我无法登录商城？<br>
+                    &nbsp;&nbsp; 答：请确认您的用户名和密码是否正确，确认您的浏览器是否支持cookie。</p>
+                <p>3、问：忘记登陆密码怎么办？<br>
+                    &nbsp;&nbsp; 答：注册过本商城购物的老用户，点击登陆框下的“忘记密码”按照提示，可以找回密码。</p>
+                <p>4、 问：付款有哪些支付方式？<br>
+                    &nbsp;&nbsp; 答：本商城支持支付宝，财付通，网银在线等在线支付，如果您没有在线支付工具，还可以通过银行汇款完成支付！</p>
+                <p>5、问：拍下商品后，在哪进行在线支付？</p>
+                <p>&nbsp;&nbsp; 答：如果您已经拍下了商品，请登录本商城会员中心，在“我的订单”中找到相应的订单，然后在操作列中点击“付款”，点击进入后就可以根据页面指示选择在线支付了。</p>
+                <p>6、 问：付款时需要注意什么？<br>
+                    &nbsp;&nbsp; 答：a，请订单确认后再付款。 b,如果是汇款，请保留好汇款底单！</p>
+                <p>7、问：订单有效期多长？<br>
+                    &nbsp;&nbsp; 答：订单确认后48小时未付款，该订单将自动关闭并无法恢复。</p>
+                <p>8、 问：订单付款后，多久能发出商品？</p>
+                <p>&nbsp;&nbsp; 答：正常情况下，会在收到货款的1-48小时内发货。单日16:00之前付款成功的订单，货物当天发出，其他情况次日发出；遇到法定节假日，则顺延。</p>
+                <p>9、 问：货物收到后，发现货物有问题怎么办？<br>
+                    &nbsp;&nbsp; 答：如确实是货物本身质量有问题，与产品客服联系，在收到货物7日内，本商城可退换货，特殊情况除外。</p>
+                <p>10、问：邮递费怎么计算？<br>
+                    &nbsp;&nbsp; 答：商城的邮费均按照各快递公司的现行收费标准收取。结算中心显示的邮递费用，</p>
+                <p>11、问：是否可以上门提货，保留多少天？<br>
+                    &nbsp;&nbsp; 答：商城暂不提供上门提货服务。</p>
+                <p>&nbsp;<br>
+                    12、问：货物发出后几日可到达客户手中?<br>
+                    &nbsp;&nbsp; 答：正常情况下：<br>
+                    &nbsp;邮政EMS：3至5天（因地域而异，送货上门）<br>
+                    &nbsp;快递 ：3天左右送达(因地域而异，送货上门)</p>
+                <p>13、 问：下单时可以指定送货时间吗？<br>
+                    &nbsp;&nbsp; 答：如果您有特定的送货时间要求,请在下订单时在“订单附言”中注明。如果已经下完订单，请与产品中心客服联系。注明订单号及送货要求。</p>
+                <p>14、问：购买的产品能开发票吗？<br>
+                    &nbsp;&nbsp; 答：因本网站价格不含税，若需要申请发票，需要另付所开发票额度的10%，暂时不办理100元以内的发票！</p>
+                <p>15、问：无货商品什么时候能到货？<br>
+                    &nbsp;&nbsp; 答：无货商品的到货时间根据配货情况而不同，无法准确估计，一旦商品有货，我们会根据您留下的方式通知您。<br>
+                    &nbsp; </p></div>
+            <!--常见问题end-->
+        </div>
+        <!--五大切换end-->
+        <div class="pb_daskcon">
+            <h1>
+                <b>评价内容</b></h1>
+            <ul>
+                <li><span>昵称：</span><input name="txtName" id="txtName" type="text"></li>
+                <li><span>评价内容：</span><textarea name="tContent" id="tContent" cols="20" rows="2"></textarea></li>
+                <li style="padding-left: 280px;">
+                    <input name="butTijiao" id="butTijiao" type="button" value=" 提交 "></li>
+            </ul>
+            <dl id="AdvisoryList"></dl>
+            <div style="text-align: right;">
+                <input type="button" id="lPage" name="button" value="上一页">
+                <input type="button" id="nPage" name="button" value="下一页">
+            </div>
+        </div>
+        <!--咨询内容end-->
+        <div id="like" class="pb_maybelike">
+            <h1><span><a href="#">更多&gt;&gt;</a></span><b>或许您会喜欢</b></h1>
+            <ol>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/like1.jpg' %}" alt="Apple/苹果 iPhone 5c电信版手机苹果5C 8G/32G 全国联保">
+                    </a>
+                    <p><a href="#" target="_blank">Apple/苹果 iPhone 5c...</a></p>
+                    市场价：<span>￥2349</span>商城价：<b>￥2099</b>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/like2.jpg' %}" alt="Apple/苹果 iPhone SE">
+                    </a>
+                    <p><a href="#" target="_blank">Apple/苹果 iPhone SE</a></p>
+                    市场价：<span>￥4388</span>商城价：<b>￥4088</b></li>
+                <li>
+                    <a href="#" target="_blank"><img src="{% static 'img/like2.jpg' %}" alt="Apple/苹果 iPhone SE"></a>
+                    <p><a href="#" target="_blank">Apple/苹果 iPhone SE</a></p>
+                    市场价：<span>￥4388</span>商城价：<b>￥4088</b>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/like3.jpg' %}" alt="Apple/苹果 iPhone 4s电信版手机苹果4S 行货 16g全新原封 国行">
+                    </a>
+                    <p><a href="#" target="_blank">Apple/苹果 iPhone 4s...</a></p>
+                    市场价：<span>￥1868</span>商城价：<b>￥1598</b>
+                </li>
+            </ol>
+        </div>
+        <!--咨询内容end-->
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block extbasejs %}
+    <script src="{% static 'goods/js/goods.js' %}"></script>
+    <script src="{% static 'goods/js/goods_1.js' %}"></script>
+{% endblock %}

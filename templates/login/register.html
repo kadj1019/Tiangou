@@ -1,0 +1,80 @@
+{% extends 'base/base_template.html' %}
+{% load static %}
+
+{% block extbasecss %}
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!--  =======================登录注册======================= -->
+
+    <div class="login">
+
+    <form action="{% url 'tiangou:register' %}" method="post" id="register-view">
+        {% csrf_token %}
+        <div class="loginLeft">
+            <h1>
+                新用户，请注册 <b>(仅需30秒)</b>
+            </h1>
+            <dl>
+                <dd id="email">
+                    <span>Email:</span>
+                    <input type="text" name="email">
+                    <strong>请输入邮箱</strong>
+                </dd>
+
+                <dd id="username">
+                    <span>用户名:</span>
+                    <input type="text" name="username">
+                    <strong>4-20英文字符,数字,'_'的组合。</strong>
+                </dd>
+
+                <dd id="password">
+                    <span>密 码:</span>
+                    <input type="password" name="password">
+                    <strong>请输入密码</strong>
+                </dd>
+
+                <dd>
+                    <span>确认密码:</span>
+                    <input type="password">
+                    <strong>请输入重复密码</strong>
+                </dd>
+
+                <dd>
+                    <span>验证码:</span>
+                    <input type="text">
+                    <p class="suiJi">验证码</p>
+                </dd>
+
+                <dt>
+                    <input type="submit" value=" " style="background: url({% static 'img/zc.gif' %}) no-repeat">
+                </dt>
+            </dl>
+        </div>
+    </form>
+    {##}
+    {#        <div class="loginRight">#}
+    {#            <h1>#}
+    {#                老用户，请登录</h1>#}
+    {#            <dl>#}
+    {#                <dd>#}
+    {#                    <span>用户名:</span><input  type="text" ></dd>#}
+    {#                <dd>#}
+    {#                    <span>密 码:</span><input  type="password" ><a href="#">忘记密码？</a></dd>#}
+    {#                <dt>#}
+    {#                    <input  type="button" style="background: url({% static 'img/dl.png' %}) no-repeat">#}
+    {#                </dt>#}
+    {#            </dl>#}
+    {#        </div>#}
+    {##}
+    {#</div>#}
+
+
+{% endblock %}
+
+
+{% block extbasejs %}
+    <script src="{% static 'login/js/register.js' %}"></script>
+{% endblock %}

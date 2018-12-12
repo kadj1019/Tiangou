@@ -1,0 +1,30 @@
+{% extends 'base/base_template.html' %}
+{% load static %}
+
+{% block extbasecss %}
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="loginRight">
+        <h1>
+            老用户，请登录</h1>
+        <dl>
+            <dd>
+                <span>用户名:</span><input type="text"></dd>
+            <dd>
+                <span>密 码:</span><input type="password"><a href="#">忘记密码？</a></dd>
+            <dt>
+                <input type="button" style="background: url({% static 'img/dl.png' %}) no-repeat">
+            </dt>
+        </dl>
+    </div>
+
+    </div>
+
+{% endblock %}
+
+
+{% block extbasejs %}
+    <script src="{% static 'login/js/register.js' %}"></script>
+{% endblock %}

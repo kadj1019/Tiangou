@@ -1,0 +1,587 @@
+{% extends 'base/base_template.html' %}
+{% load static %}
+
+{% block extbasecss %}
+    <link rel="stylesheet" href="{% static 'home/css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!--  ==================== 轮播图 ================  -->
+    <div class="lunBo">
+        <div class="lun_left">
+            <ul style="background: url({% static 'img/back_li.gif' %})">
+                <li>
+                    <img src="{% static 'img/li5.jpg' %}" alt="">
+                    <a class="aa" href="">家用电器</a>
+
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li11.jpg' %}" alt="">
+                    <a class="aa" href="">珠宝首饰</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li12.jpg' %}" alt="">
+                    <a class="aa" href="">时尚钟表</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li13.jpg' %}" alt="">
+                    <a class="aa" href="">运动健康</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li7.jpg' %}" alt="">
+                    <a class="aa" href="">图书音像</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li9.jpg' %}" alt="">
+                    <a class="aa" href="">家居家装</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li10.jpg' %}" alt="">
+                    <a class="aa" href="">厨具用品</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li4.jpg' %}" alt="">
+                    <a class="aa" href="">电脑办公</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li2.jpg' %}" alt="">
+                    <a class="aa" href="">服饰鞋帽</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li5.jpg' %}" alt="">
+                    <a class="aa" href="">家用电器</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li8.jpg' %}" alt="">
+                    <a class="aa" href="">个护化妆</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li6.jpg' %}" alt="">
+                    <a class="aa" href="">汽车用品</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li3.jpg' %}" alt="">
+                    <a class="aa" href="">玩具乐器</a>
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <img src="{% static 'img/li1.jpg' %}" alt="">
+                    <a class="aa" href="">食品保健</a>
+
+                    <ul class="clearfix">
+                        <div class="brandtan clear">
+                            <div class="selectsort">
+                            </div>
+                            <div class="prdhot">
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="lun_center">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><a href="#"><img src="{% static 'img/b1.jpg' %}" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="{% static 'img/b2.jpg' %}" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="{% static 'img/b3.jpg' %}" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="{% static 'img/b4.jpg' %}" alt=""></a></div>
+
+                    {#                    {% for foo in lunbo %}#}
+                    {#                        <div class="swiper-slide">#}
+                    {#                            <a href="#">#}
+                    {#                                <img src="{{ foo.img }}" alt="">#}
+                    {#                            </a>#}
+                    {#                        </div>#}
+                    {#                    {% endfor %}#}
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            {#            <ul class="bigPic">#}
+            {#                <li>#}
+            {#                </li>#}
+            {#            </ul>#}
+            {#            <ul class="smallPic"></ul>#}
+            {#            <a href="#" class="prev">&lt;</a>#}
+            {#            <a href="#" class="next">&gt;</a>#}
+
+        </div>
+        <div class="lun_right">
+            <ul>
+                <li><a href=""><img src="{% static 'img/tel1.gif' %}" alt=""></a></li>
+                <li><a href=""><img src="{% static 'img/tel2.gif' %}" alt=""></a></li>
+                <li><a href=""><img src="{% static 'img/tel3.gif' %}" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   ================     品牌     ==============  -->
+    <div class="brand">
+        <ul class="brand_list">
+            <li><a href="#"><img src="{% static 'img/pinpai1.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'img/pinpai2.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'img/pinpai3.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'img/pinpai4.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'img/pinpai5.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'img/pinpai6.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'img/pinpai7.jpg' %}" alt=""></a></li>
+        </ul>
+        <div class="brand_more">
+            <a href="">更多</a>
+        </div>
+    </div>
+    <!--   ================     秒杀     ==============  -->
+    <div class="miaoSha">
+        <div class="ms_left">
+            <div class="ms_list1">
+                <ul>
+                    <li class="hover">秒杀</li>
+                    <li>超值特惠</li>
+                    <li>人气热卖</li>
+                    <li class="last">今日抢购</li>
+                </ul>
+            </div>
+            <div class="ms_list2">
+                <ul  class="aaa">
+                    {% for g in goods %}
+                        <li>
+                            <a href="{% url 'tiangou:goods' g.id %}" ><img src="{{ g.img }}" alt=""></a>
+                            <p>{{ g.msg }}</p>
+                            <span>{{ g.price }}</span>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                <ul>
+                    {% for h in pro2 %}
+                        <li>
+                            <a href="#"><img src="{{ h.img }}" alt=""></a>
+                            <p>{{ h.msg }}</p>
+                            <span>{{ h.price }}</span>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                <ul>
+                    {% for i in pro3 %}
+                        <li>
+                            <a href="#"><img src="{{ i.img }}" alt=""></a>
+                            <p>{{ i.msg }}</p>
+                            <span>{{ i.price }}</span>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                <ul>
+                    {% for j in pro4 %}
+                        <li>
+                            <a href="#"><img src="{{ j.img }}" alt=""></a>
+                            <p>{{ j.msg }}</p>
+                            <span>{{ j.price }}</span>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+        <div class="ms_right">
+            <a href="#">
+                <img src="{% static 'img/pro_1.jpg' %}" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!--   ================     会员促销     ==============  -->
+    <div class="vip">
+        <div class="vip1">
+            <div class="vip_center">
+                <div class="title">
+                    <h3>
+                        会员促销</h3>
+                    <em>Brand Promotions</em><span>
+
+                </span>
+                </div>
+                <ul class="vip_list">
+
+                    <li><img src="{% static 'img/vip2.jpg' %}" alt=""></li>
+                    <li><img src="{% static 'img/vip4.jpg' %}" alt=""></li>
+                    <li><img src="{% static 'img/vip6.jpg' %}" alt=""></li>
+                    <li><img src="{% static 'img/vip5.jpg' %}" alt=""></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--   ================     手机数码     ==============  -->
+
+    <div class="phone">
+        <div class="phone1">
+            <div class="phone_center">
+                <div class="title1">
+                    <h3>
+                        手机数码</h3>
+                    <em>Brand Promotions</em><span></span>
+                    <div class="rightLink"><a href="#">手机通讯</a>|<a href="#">手机配件</a>|<a href="#">摄影摄像</a>|<a href="#">数码配件</a>|<a
+                            href="#">时尚影音</a>|
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="phone_lun">
+            {% for e in phone_lun %}
+                <a href="#"><img src="{{ e.img }}" alt=""></a>
+
+            {% endfor %}
+
+        </div>
+        <ul class="phone_list">
+            {% for phone in phone_list %}
+                <li>
+                    <a href="#"><img src="{{ phone.img }}" alt=""></a>
+                    <p>{{ phone.msg }}</p>
+                    <span>{{ phone.price }}</span>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <!--   ================     礼品箱包     ==============  -->
+    <div class="phone">
+        <div class="phone1">
+            <div class="phone_center">
+                <div class="title1">
+                    <h3>
+                        礼品箱包</h3>
+                    <em>Brand Promotions</em><span></span>
+                    <div class="rightLink"><a href="#
+">潮流女包</a>|<a href="#">时尚男包</a>|<a href="#">功能箱包</a>|<a
+                            href="#">礼品</a>|<a href="#">奢侈品</a>|
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gift_lun">
+            {% for f in gift_lun %}
+                <a href="#"><img src="{{ f.img }}" alt=""></a>
+
+            {% endfor %}
+        </div>
+        <ul class="phone_list">
+            {% for phone in phone_list %}
+                <li>
+                    <a href="#"><img src="{{ phone.img }}" alt=""></a>
+                    <p>{{ phone.msg }}</p>
+                    <span>{{ phone.price }}</span>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <!--   ================     通栏广告     ==============  -->
+    <div class="tonglan">
+        <a href="#"><img src="{% static 'img/tonglan.jpg' %}" alt=""></a>
+    </div>
+
+    <!--   ================     厨具用品  电脑办公    ==============  -->
+    <div class="computer">
+        <div class="comLeft">
+            <div class="comLeft1">
+                <div class="computer_center">
+                    <div class="title2">
+                        <h3>
+                            厨具用品</h3>
+                        <em>Brand Promotions</em><span></span>
+                        <div class="rightLink"><a href="#">烹饪锅具</a>|<a href="#">刀剪砧板</a>|<a href="#">收纳保鲜</a>|<a
+                                href="#">水具酒具</a>|
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comLeft_lun">
+                {% for d in computer_lun %}
+                    <a href="#"><img src="{{ d.img }}" alt=""></a>
+                {% endfor %}
+
+            </div>
+            <ul class="comRight_list">
+                {% for b in computer_list %}
+                    <li>
+                        <a href="#"><img src="{{ b.img }}" alt=""></a>
+                        <p>{{ b.msg }}</p>
+                        <span>{{ b.price }}</span>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+
+
+        <div class="comRight">
+            <div class="comLeft1">
+                <div class="computer_center">
+                    <div class="title2">
+                        <h3>
+                            电脑办公</h3>
+                        <em>Brand Promotions</em><span></span>
+                        <div class="rightLink"><a href="#">电脑整机</a>|<a href="#">电脑配件</a>|<a href="#">外设产品</a>|<a
+                                href="#">网络产品</a>|
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comRight_lun">
+                {% for c in computer1 %}
+                    <a href="#"><img src="{{ c.img }}" alt=""></a>
+                {% endfor %}
+
+            </div>
+            <ul class="comRight_list">
+                {% for b in computer_list %}
+                    <li>
+                        <a href="#"><img src="{{ b.img }}" alt=""></a>
+                        <p>{{ b.msg }}</p>
+                        <span>{{ b.price }}</span>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+
+    <!--   ================     鞋帽服饰    ==============  -->
+
+    <div class="phone">
+        <div class="phone1">
+            <div class="phone_center">
+                <div class="title1">
+                    <h3>
+                        鞋帽服饰</h3>
+                    <em>Brand Promotions</em><span></span>
+                    <div class="rightLink"><a href="#">男装</a>|<a href="#">女装</a>|<a href="#">运动</a>|<a
+                            href="#">内衣</a>|<a href="#">配饰</a>|<a href="#">男鞋</a>|<a href="#">女鞋</a>|<a href="#">童装</a>|<a
+                            href="#">童鞋</a>|<a href="#">裤子</a>|<a href="#">情侣套装</a>|
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dress_lun" style="display: block">
+            {% for dress1 in dress_lun %}
+                <a href="#"><img src="{{ dress1.img }}" alt=""></a>
+            {% endfor %}
+
+        </div>
+        <ul class="dress_list">
+            {% for foo in dress %}
+                <li>
+                    <a href="#"><img src="{{ foo.img }}" alt=""></a>
+                    <p>{{ foo.msg }}</p>
+                    <span>{{ foo.price }}</span>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <!--   ================    个护化妆    ==============  -->
+    <div class="phone">
+        <div class="phone1">
+            <div class="phone_center">
+                <div class="title1">
+                    <h3>
+                        个护化妆</h3>
+                    <em>Brand Promotions</em><span></span>
+                    <div class="rightLink"><a href="#">面部护理</a>|<a href="#">身体护理</a>|<a href="#">口腔护理</a>|<a href="#">女性护理</a>|<a
+                            href="#">魅力彩妆</a>|<a href="#">香水SPA</a>|<a href="#">男士护理</a>|
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="makeup_lun">
+            {% for fo in makeup_lun %}
+                <a href="#"><img src="{{ fo.img }}" alt=""></a>
+            {% endfor %}
+
+        </div>
+        <ul class="makeup_list">
+            {% for a in makeup_list %}
+                <li>
+                    <a href="#"><img src="{{ a.img }}" alt=""></a>
+                    <p>{{ a.msg }}</p>
+                    <span>{{ a.price }}</span>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <!--   ================     通栏广告     ==============  -->
+    <div class="tonglan">
+        <a href="#"><img src="{% static 'img/tonglan1.jpg' %}" alt=""></a>
+    </div>
+
+    <!--   ================     热门商品分类     ==============  -->
+    <div class="fenlei-f clear">
+
+        <div class="title"
+             style="border-style: none; text-align: center; height: 20px; line-height: 20px;font-weight: bold">热门商品分类
+        </div>
+        <ul class="hotSort">
+            <li><h3><a href="/p/aspx/list.aspx?typeid=F_20">珠宝首饰</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=S_65">时尚饰品</a><a href="/p/aspx/list.aspx?typeid=S_65">纯金K金</a><a
+                        href="/p/aspx/list.aspx?typeid=S_65">金银投资</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_34">烹饪锅具</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_188">炒锅</a><a href="/p/aspx/list.aspx?typeid=T_188">煎锅</a><a
+                        href="/p/aspx/list.aspx?typeid=T_188">压力锅</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_39">电脑整机</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_360">笔记本</a><a href="/p/aspx/list.aspx?typeid=T_360">超极本</a><a
+                        href="/p/aspx/list.aspx?typeid=T_360">上网本</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_45">男装</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_524">衬衫</a><a href="/p/aspx/list.aspx?typeid=T_524">T恤</a><a
+                        href="/p/aspx/list.aspx?typeid=T_524">针织衫</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_46">女装</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_531">衬衫</a><a href="/p/aspx/list.aspx?typeid=T_531">T恤</a><a
+                        href="/p/aspx/list.aspx?typeid=T_531">针织衫/羊毛衫</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_49">配饰</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_564">眼镜</a><a href="/p/aspx/list.aspx?typeid=T_564">腰带</a><a
+                        href="/p/aspx/list.aspx?typeid=T_564">帽子</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_54">面部护理</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_233">洁面乳</a><a href="/p/aspx/list.aspx?typeid=T_233">爽肤水</a><a
+                        href="/p/aspx/list.aspx?typeid=T_233">精华露</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_58">魅力彩妆</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_281">粉底/遮瑕</a><a href="/p/aspx/list.aspx?typeid=T_281">腮红</a><a
+                        href="/p/aspx/list.aspx?typeid=T_281">眼影/眼线</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_59">香水SPA</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_300">女士香水</a><a href="/p/aspx/list.aspx?typeid=T_300">男士香水</a><a
+                        href="/p/aspx/list.aspx?typeid=T_300">组合套装</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_60">潮流女包</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_339">钱包/卡包</a><a href="/p/aspx/list.aspx?typeid=T_339">手拿包</a><a
+                        href="/p/aspx/list.aspx?typeid=T_339">单肩包</a></p></li>
+            <li><h3><a href="/p/aspx/list.aspx?typeid=S_107">乐器相关</a></h3>
+                <p><a href="/p/aspx/list.aspx?typeid=T_817">钢琴</a><a href="/p/aspx/list.aspx?typeid=T_817">电子琴</a><a
+                        href="/p/aspx/list.aspx?typeid=T_817">手风琴</a></p></li>
+        </ul>
+
+    </div>
+
+
+{% endblock %}
+
+
+{% block extbasejs %}
+    <script src="{% static 'home/js/swiper.min.js' %}"></script>
+    <script src="{% static 'home/js/home.js' %}"></script>
+{% endblock %}

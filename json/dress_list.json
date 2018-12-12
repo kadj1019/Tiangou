@@ -1,0 +1,52 @@
+[
+  {
+    "msg":"4006#热卖人气爆款 夏季时尚简约短袖t恤 男 字母印花",
+    "price":"￥35元",
+    "img":"static/img/dr1.jpg"
+  },
+  {
+    "msg":"凉鞋超高细跟露趾缎面镶钻金属吊饰",
+    "price":"￥186元",
+    "img":"static/img/dr2.jpg"
+  },
+  {
+    "msg":"秋装新品 薄款韩版修身显瘦小脚牛仔裤",
+    "price":"￥72元",
+    "img":"static/img/dr3.jpg"
+  },
+  {
+    "msg":"韩版新品男款衬衫 格子拼接男士衬衫 修身休闲短袖衬衫 ",
+    "price":"￥74元",
+    "img":"static/img/dr4.jpg"
+  },
+  {
+    "msg":"秋冬新款都市休闲时尚毛毛绒男式加厚夹克外套",
+    "price":"￥248元",
+    "img":"static/img/dr5.jpg"
+  },
+  {
+    "msg":"拖鞋超高细跟露趾缎面串珠蝴蝶结",
+    "price":"￥140元",
+    "img":"static/img/dr6.jpg"
+  },
+  {
+    "msg":"潮流时尚夏款新品T恤 男士撞色条纹时尚修身休闲短袖P",
+    "price":"￥91元",
+    "img":"static/img/dr7.jpg"
+  },
+  {
+    "msg":"新款男士打底衫 休闲男式纯色T恤 时尚男款圆领短袖T恤 ",
+    "price":"￥50元",
+    "img":"static/img/dr8.jpg"
+  },
+  {
+    "msg":"潮流男款衬衫 男士中袖衬衫 七分男式衬衫 时尚修身休闲短袖衬衫",
+    "price":"￥56元",
+    "img":"static/img/dr9.jpg"
+  },
+  {
+    "msg":"拖鞋超高细跟宽口缎面豹纹镶钻蝴蝶结",
+    "price":"￥160元",
+    "img":"static/img/dr10.jpg"
+  }
+]
