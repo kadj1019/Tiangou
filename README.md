@@ -1,2 +1,0 @@
-“#Tiangou”
-# Tiangou
