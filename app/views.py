@@ -161,7 +161,7 @@ def index(request):
     pro4 = pro[12:16]
     goods = Goods.objects.all()
 
-    # token = request.session.get('token')
+    token = request.session.get('token')
 
     data = {
         'dress': dress,
@@ -181,11 +181,10 @@ def index(request):
         'pro': pro,
         'goods': goods,
     }
-    # if token:
-    #     user = User.objects.get(token=token)
-    #     data['name'] = user.username
-    #     data['email'] = user.email
-
+    if token:
+        user = User.objects.get(token=token)
+        data['username'] = user.username
+        data['email'] = user.email
     return render(request, 'homepage/homepage.html', context=data)
 
 
@@ -204,10 +203,6 @@ def generate_token():
     return md5.hexdigest()
 
 
-def login(request):
-    return render(request, 'login/login.html')
-
-
 def goods(request, id):
     goods = Goods.objects.get(pk=id)
 
@@ -217,6 +212,22 @@ def goods(request, id):
 
     return render(request, 'goods/goods.html', context=data)
 
+
+def login(request):
+    if request.method == "GET":
+        return render(request, 'login/login.html')
+    elif request.method == "POST":
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = User.objects.get(email=email)
+        if user:
+            if password == user.password:
+                user.token = generate_token()
+                user.save()
+                request.session['token'] = user.token
+                return redirect('tiangou:homepage')
+        else:
+            return HttpResponse('账号或者密码错误')
 
 def register(request):
     if request.method == "GET":
@@ -228,5 +239,6 @@ def register(request):
         user.password = request.POST.get('password')
         user.token = generate_token()
         user.save()
+        request.session['token'] = user.token
 
         return redirect('tiangou:homepage')

@@ -7,7 +7,7 @@
 .lun_left ul li{
     width: 135px;
     height: 35px;
-    background: url("img/back_li.gif");
+    /*background: url("img/back_li.gif");*/
     line-height: 35px;
     cursor: pointer;
     text-align: center;

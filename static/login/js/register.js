@@ -94,21 +94,22 @@ $(function () {
 
     // 登录页面
     $(".loginRight input").eq(2).click(function () {
-        // 获取所有注册过的用户名
-        var users = $.cookie("users");
-        if (users) {
-            users = JSON.parse(users);
-            var isExist = false;
-            for (var i = 0; i < users.length; i++) {
-                if ($(".loginRight input").eq(0).val() == users[i].name && $(".loginRight input").eq(1).val() == users[i].pwd) {
-                    alert("登录成功!");
-                    location.href = "homepage page.html";
-                    isExist = true;
-                }
-            }
-            if (!isExist) {
-                alert("用户名或密码错误！")
-            }
-        }
+        // // 获取所有注册过的用户名
+        // var users = $.cookie("users");
+        // if (users) {
+        //     users = JSON.parse(users);
+        //     var isExist = false;
+        //     for (var i = 0; i < users.length; i++) {
+        //         if ($(".loginRight input").eq(0).val() == users[i].name && $(".loginRight input").eq(1).val() == users[i].pwd) {
+        //             alert("登录成功!");
+        //             location.href = "homepage page.html";
+        //             isExist = true;
+        //         }
+        //     }
+        //     if (!isExist) {
+        //         alert("用户名或密码错误！")
+        //     }
+        // }
+        console.log("1")
     })
-})
+});
