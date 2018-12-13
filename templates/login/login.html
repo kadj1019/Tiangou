@@ -6,22 +6,26 @@
 {% endblock %}
 
 {% block content %}
-    <div class="loginRight">
-        <h1>
-            老用户，请登录</h1>
-        <dl>
-            <dd>
-                <span>邮箱:</span><input type="text" name="email"></dd>
-            <dd>
-                <span>密 码:</span><input type="password" name="password"><a href="#">忘记密码？</a></dd>
-            <dt>
-                <input type="submit" style="background: url({% static 'img/dl.png' %}) no-repeat">
-            </dt>
-        </dl>
-    </div>
+    <form action="{% url 'tiangou:login' %}" method="post">
+    {% csrf_token %}
+        <div class="loginRight">
+            <h1>
+                老用户，请登录</h1>
+            <dl>
+                <dd>
+                    <span>邮箱:</span><input type="text" name="email"></dd>
+                <dd>
+                    <span>密 码:</span><input type="password" name="password">
+                    <p>{{ u_err }}</p>
+                    <a href="#">忘记密码？</a></dd>
+                <dt>
+                    <input type="submit" style="background: url({% static 'img/dl.png' %}) no-repeat"><p>{{ p_err }}</p>
+                </dt>
+            </dl>
+        </div>
 
-    </div>
-
+        </div>
+    </form>
 {% endblock %}
 
 

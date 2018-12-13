@@ -214,20 +214,27 @@ def goods(request, id):
 
 
 def login(request):
+    # request.session.flush()
     if request.method == "GET":
         return render(request, 'login/login.html')
     elif request.method == "POST":
         email = request.POST.get('email')
         password = request.POST.get('password')
-        user = User.objects.get(email=email)
-        if user:
-            if password == user.password:
+
+        try:
+            user = User.objects.get(email=email)
+            if user.password == password:
                 user.token = generate_token()
                 user.save()
                 request.session['token'] = user.token
+
                 return redirect('tiangou:homepage')
-        else:
-            return HttpResponse('账号或者密码错误')
+            else:
+                return render(request, 'login/login.html', context={'u_err': '账号或者密码错误'})
+        except:
+            return render(request, 'login/login.html', context={'p_err': '用户不存在'})
+
+
 
 def register(request):
     if request.method == "GET":
@@ -242,3 +249,8 @@ def register(request):
         request.session['token'] = user.token
 
         return redirect('tiangou:homepage')
+
+
+def loginout(request):
+    request.session.flush()
+    return redirect('tiangou:homepage')

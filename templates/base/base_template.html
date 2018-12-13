@@ -14,6 +14,9 @@
     <div class="t-menu">
         <div class="hello">
             你好：欢迎光临天狗商城！[<a href="{% url 'tiangou:login' %}">{{ username | default:'请登录' }}</a>][<a href="{% url 'tiangou:register' %}">{{ email | default:'免费注册' }}</a>]
+            {% if email %}
+                [<a href="{% url 'tiangou:loginout' %}">退出</a>]
+            {% endif %}
         </div>
         <div class="shop">
             <span class="shoppingCar">
