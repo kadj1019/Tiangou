@@ -161,7 +161,7 @@ def index(request):
     pro4 = pro[12:16]
     goods = Goods.objects.all()
 
-    token = request.session.get('token')
+    # token = request.session.get('token')
 
     data = {
         'dress': dress,
@@ -181,10 +181,10 @@ def index(request):
         'pro': pro,
         'goods': goods,
     }
-    if token:
-        user = User.objects.get(token=token)
-        data['name'] = user.username
-        data['email'] = user.email
+    # if token:
+    #     user = User.objects.get(token=token)
+    #     data['name'] = user.username
+    #     data['email'] = user.email
 
     return render(request, 'homepage/homepage.html', context=data)
 
