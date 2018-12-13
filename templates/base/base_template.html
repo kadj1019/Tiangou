@@ -13,7 +13,18 @@
 <div class="top-header">
     <div class="t-menu">
         <div class="hello">
-            你好：欢迎光临天狗商城！[<a href="{% url 'tiangou:login' %}">{{ username | default:'请登录' }}</a>][<a href="{% url 'tiangou:register' %}">{{ email | default:'免费注册' }}</a>]
+            你好：欢迎光临天狗商城！&nbsp;&nbsp;
+            {% if username %}
+                [ <span>{{ username }}</span> ]
+            {% else %}
+                [ <a href="{% url 'tiangou:login' %}">请登录！</a> ]
+            {% endif %}
+
+            {% if email %}
+                [ <span>{{ email }}</span> ]
+            {% else %}
+                [ <a href="{% url 'tiangou:register' %}">免费注册</a> ]
+            {% endif %}
             {% if email %}
                 [<a href="{% url 'tiangou:loginout' %}">退出</a>]
             {% endif %}
@@ -55,7 +66,8 @@
                             <input style="border: none; background: url({% static 'base/img/search.png' %})  left top; height: 30px;
                                     width: 148px;" onclick="search()" type="button">
                         </span>
-                    <input class="input-n" id="searchWord" style="background: url({% static 'img/bg_bg.gif' %}) no-repeat;" placeholder="多搜搜，意外惊喜等你拿">
+                    <input class="input-n" id="searchWord"
+                           style="background: url({% static 'img/bg_bg.gif' %}) no-repeat;" placeholder="多搜搜，意外惊喜等你拿">
                 </dd>
                 <dt class="suol">
                     <a href="#" target="_blank">手机/钟表/家电/电脑/男装/女装/灯具/童装/儿童玩具/笔记本/平板/相机/鞋</a></dt>
